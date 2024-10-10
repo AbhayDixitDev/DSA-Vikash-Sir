@@ -1,6 +1,6 @@
 // Q.6 W.A.P.  to display array in ascending orders?
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main(){
