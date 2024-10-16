@@ -2,37 +2,34 @@
 using namespace std;
 
 int srt(int arr[], int low, int high) {
-    int pvt = arr[low]; // pivot element
-    int i = low + 1;
-    int j = high;
-
-    while (i <= j) {
-        while (i <= j && arr[i] <= pvt) {
-            i++;
-        }
-        while (i <= j && arr[j] > pvt) {
-            j--;
-        }
-        if (i <= j) {
-            swap(arr[i], arr[j]);
-        }
-//        cout<<pvt<<" ";
-    }
-    swap(arr[low], arr[j]);
-    return j;
+	int pvt=arr[low];
+	int p=low+1;
+	int q=high;
+	
+	while(p<=q){
+		while(arr[p]<=pvt && p<=q){
+		  p++;	
+		}
+		while(arr[q]>pvt && p<=q){
+			q--;
+		}
+		if(p<=q){
+			swap(arr[p],arr[q]);
+		}
+	}
+	swap(arr[low],arr[q]);
+	return q;
 }
 
 void qs(int arr[],int low,int high){
 	if(low<high){
 		int pvt;
 		pvt=srt(arr,low,high);
-//		cout<<pvt;
+//		cout<<pvt<<" ";
 		qs(arr,low,pvt-1);
 		qs(arr,pvt+1,high);
 	}
 }
-
-
 
 void prntarr(int arr[],int s){
 	for(int i=0;i<s;i++){
