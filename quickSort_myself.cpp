@@ -3,22 +3,22 @@ using namespace std;
 
 int srt(int arr[], int low, int high) {
 	int pvt=arr[low];
-	int p=low+1;
-	int q=high;
+	int left=low+1;
+	int right=high;
 	
-	while(p<=q){
-		while(arr[p]<=pvt && p<=q){
-		  p++;	
+	while(left<=right){
+		while(arr[left]<=pvt && left<=right){
+		  left++;	
 		}
-		while(arr[q]>pvt && p<=q){
-			q--;
+		while(arr[right]>pvt && left<=right){
+			right--;
 		}
-		if(p<=q){
-			swap(arr[p],arr[q]);
+		if(left<=right){
+			swap(arr[left],arr[right]);
 		}
 	}
-	swap(arr[low],arr[q]);
-	return q;
+	swap(arr[low],arr[right]);
+	return right;
 }
 
 void qs(int arr[],int low,int high){
