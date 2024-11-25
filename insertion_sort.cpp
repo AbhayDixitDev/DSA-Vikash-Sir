@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int arr[] = {5, 2, 8, 3, 1, 6, 4,1};
+    int arr[] = {5, 4,3,2,1};
     int n = sizeof(arr) / sizeof(arr[0]);
         cout << "unSorted array: ";
  for (int i = 0; i < n; i++) {

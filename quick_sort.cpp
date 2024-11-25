@@ -18,7 +18,7 @@ int srt(int arr[], int low, int high) {
         }
 //        cout<<pvt<<" ";
     }
-    swap(arr[low], arr[j]);
+    swap(pvt, arr[j]);
     return j;
 }
 

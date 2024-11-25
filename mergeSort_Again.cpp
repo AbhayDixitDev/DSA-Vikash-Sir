@@ -4,8 +4,7 @@ using namespace std;
 void merge(int arr[],int s, int mid, int e){
 
      int temp[e+1];
-	 int c=s;
-     
+	 int c=s;     
      int i = s;
      int j = mid+1;
      
