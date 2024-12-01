@@ -11,15 +11,8 @@
 #include <algorithm>
 using namespace std;
 
-int main(){
-	vector<int>v1{10,3,5,6,2};
-	vector<int>v2;
-	for(auto i:v1){
-		cout<<i<<" ";
-	}
-	cout<<"\n";
-	
-	for(int i=0;i<v1.size();i++){
+void prod(vector<int> &v1,vector<int> &v2){
+	/*for(int i=0;i<v1.size();i++){    //logic 1
 		int p=1;  //1
 		for(int j=0;j<v1.size();j++){
 			if(v1[j]==v1[i]){
@@ -29,11 +22,36 @@ int main(){
 				p=p*v1[j]; //p=90*2
 			}
 		}
+		
 		v2.push_back(p);
+	}*/
+	int prod=1;  //logic 2
+	for(int i=0;i<v1.size();i++){
+		prod *= v1[i];
+	}
+	for(int i=0;i<v1.size();i++){
+		v2.push_back(prod);
+	}
+	for(int i=0;i<v1.size();i++){
+		v2[i]= v2[i]/v1[i];
 	}
 	
-	for(auto i:v2){
+}
+
+void show(vector<int> v){
+	for(auto i:v){
 		cout<<i<<" ";
 	}
+}
+
+int main(){
+	vector<int>v1{10,3,5,6,2};
+	vector<int>v2;
 	
+	show(v1);
+	cout<<"\n";
+	
+	prod(v1,v2);
+	
+	show(v2);	
 }
