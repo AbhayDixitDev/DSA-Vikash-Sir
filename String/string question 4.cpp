@@ -3,26 +3,31 @@
 //Sample Input: C++ is a programming language.
 //Sample Output: programming
 
-
 #include <iostream>
 #include <string>
-#include <sstream>
 using namespace std;
 
 int main() {
-    string input;
-    cout << "Enter a string: ";
-    getline(cin, input);
+    string input = "C++ is a programming language";
+    string largestWord = "";
+    string currentWord = "";
     
-    stringstream ss(input);
-    string word, largestWord;
-    
-    while (ss >> word) {
-        if (word.length() > largestWord.length()) {
-            largestWord = word;
+    for (char c : input) {
+        if (c == ' ') {
+            if (currentWord.length() > largestWord.length()) {
+                largestWord = currentWord;
+            }
+            currentWord = "";
+        } else {
+            currentWord += c;
         }
     }
     
+    if (currentWord.length() > largestWord.length()) {
+        largestWord = currentWord;
+    }
+    
     cout << "Largest word: " << largestWord << endl;
+    
     return 0;
 }
