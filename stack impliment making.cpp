@@ -2,7 +2,7 @@
 using namespace std;
 
 class stk{
-	public: int *arr;
+	public: int *arr=NULL;  //pointer types free pointer, null poiter, wild pointer, dangling pointer
 	int top;
 	int n;
 	stk(int k){
