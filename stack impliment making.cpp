@@ -7,8 +7,8 @@ class stk{
 	int n;
 	
 	stk(int k){
-		n=k;
-		arr=new int[n];
+		n = k;
+		arr = new int[n];
 		top=-1;
 	}
 	void push(int a){
