@@ -5,6 +5,7 @@ class stk{
 	public: int *arr=NULL;  //pointer types free pointer, null poiter, wild pointer, dangling pointer
 	int top;
 	int n;
+	
 	stk(int k){
 		n=k;
 		arr=new int[n];
@@ -16,7 +17,7 @@ class stk{
 			return;
 		}
 		top++;
-		arr[top]=a;
+		arr[top] = a ;
 	}
 	int tops(){
 		if(top==-1){
