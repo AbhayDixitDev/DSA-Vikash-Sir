@@ -9,25 +9,25 @@ class stk{
 	stk(int k){
 		n = k;
 		arr = new int[n];
-		top=-1;
+		top = -1;
 	}
 	void push(int a){
-		if(top==n-1){
-			cout<<"overflow\n";
+		if(top == n-1){
+			cout << "overflow\n";
 			return;
 		}
 		top++;
 		arr[top] = a ;
 	}
 	int tops(){
-		if(top==-1){
+		if(top == -1){
 			cout<<"no element \n";
 		}
 		return arr[top];
 		
 	}
 	void pop(){
-		if(top==-1){
+		if(top == -1){
 			cout<<"there is no value to pop\n";
 			return ;
 		}
