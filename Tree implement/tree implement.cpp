@@ -35,8 +35,7 @@ void inOrder(Node* root,int &c,int &l , int &k) {
 
 	cout << root->data << " "; 
     inOrder(root->right,c,l,k);
-    
-    
+        
 //    if(root->left==nullptr && root->right==nullptr){
     	c++;
 //	}
@@ -78,8 +77,6 @@ void postOrder(Node* root,int &c) {
 	cout<<root->data<<" "; 
 }
 
-
-
 int main() {
     Node* root = nullptr;
 
@@ -96,8 +93,7 @@ int main() {
     cout << "In-order traversal: ";
     inOrder(root,c,l,k);
 //    cout << endl <<"there are "<< c << " leaves node in tree"<< endl;
-    cout << endl <<"there are "<< c << "  node in tree"<< endl;
-  
+    cout << endl <<"there are "<< c << "  node in tree"<< endl;  
 
     cout << "Pre-order traversal: ";
     preOrder(root,c);
