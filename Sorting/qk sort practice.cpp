@@ -7,7 +7,7 @@ int divide(int arr[],int low,int high)
 	int pivot = low;
 	int i=low+1;
 	int j=high;
-		do{
+		while(i<=j){
 			while(arr[i]<=arr[pivot]){
 				i++;
 			}
@@ -18,7 +18,7 @@ int divide(int arr[],int low,int high)
 					swap(arr[i],arr[j]);
 			}
 		
-		}while(i<=j);
+		}
 		
 		swap(arr[j],arr[pivot]);
 	
@@ -37,7 +37,7 @@ void qksort(int arr[],int low,int high){
 
 int main()
 {
-	int arr[]= {5,4,3,2,1};
+	int arr[]= {5,5,4,3,2,1};
 	int s=sizeof(arr)/sizeof(arr[0]);
 	qksort(arr,0,s-1);
 	

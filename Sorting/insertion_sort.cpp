@@ -10,11 +10,15 @@ int main() {
     }
     cout << endl;
     for (int i = 1; i < n; i++) {
-        int sorted = i;
-        while (sorted >= 0 && arr[sorted-1] > arr[sorted]) {
-            swap(arr[sorted-1], arr[sorted]); 
-            sorted--;
-        }
+        for(int j=i;j>0;j--){
+        	if(arr[j-1] > arr[j]){
+        		swap(arr[j-1], arr[j]); 
+			}
+			else{
+				break;
+			}
+		}
+        
     }
     cout << "Sorted array  : ";
     for (int i = 0; i < n; i++) {
